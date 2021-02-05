@@ -2,28 +2,32 @@
  
 
  <div class="col">
-  <b-card 
-    
-    :footer="date"
-    footer-tag="footer"
-    style="col"
-     
-
-  >
-    <template #header class="bg-variant: success">
   
-    <span  >{{idx}}</span><b-button @click='supp' >X</b-button>
-    </template>
-    <b-card-text>{{data}}</b-card-text>
-     
-  </b-card>
+<div class="card-header bg-success ">
+    <span  >{{idx}}</span>
+    
+  
+      <b-icon icon="x-square"  variant="danger" class="mb float-right"   @click="supp"  ></b-icon>
+ 
+    
+  </div>
+  <div class="card-body">
+    
+    <p class="card-text">{{data}}</p>
+    
+  </div>
+  <div class="card-footer text-muted">
+    {{date}}
+  </div>
+
+ 
  </div>
 
 
 </template>
 
 <script lang="ts">
-import { Component,  Prop,  Vue,  } from 'vue-property-decorator';
+import { Component,  Prop,  Vue} from 'vue-property-decorator';
 
 
 
